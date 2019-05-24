@@ -247,7 +247,7 @@ fun normalClass(): Boolean {
                         || listOfTokens[tokenNo].classPart == ConstantClass.CURL_BRAC_OPEN
                     ) {
                         if (ext()) {
-                            referenceTableModel.reference = classTableCounter++
+                            referenceTableModel.reference = classTableCounter
                             if (insertRefTable(referenceTableModel)) {
                                 classTableList.add(classDataTableModel)
                                 referenceTable.add(referenceTableModel)
@@ -785,6 +785,9 @@ fun normalClassBody(): Boolean {
                     classTableList.add(classDataTableModel)
                     classDataTableModel = ClassDataTableModel()
                     classTableCounter++
+                }else{
+                    println("VARIABLE ALREADY DECLARED ON TOP LEVEL")
+                    System.exit(0)
                 }
                 if (normalClassBody()) {
                     result = true
@@ -820,6 +823,10 @@ fun normalClassBody(): Boolean {
                     classTableList.add(classDataTableModel)
                     classDataTableModel = ClassDataTableModel()
                     classTableCounter++
+                }
+                else{
+                    println("VARIABLE ALREADY DECLARED ON TOP LEVEL")
+                    System.exit(0)
                 }
                 if (normalClassBody()) {
                     result = true
@@ -859,6 +866,9 @@ fun normalClassBody(): Boolean {
                             classTableList.add(classDataTableModel)
                             classDataTableModel = ClassDataTableModel()
                             classTableCounter++
+                        }else{
+                            println("VARIABLE ALREADY DECLARED ON TOP LEVEL")
+                            System.exit(0)
                         }
                         if (normalClassBody()) {
                             result = true

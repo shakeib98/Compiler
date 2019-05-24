@@ -31,8 +31,10 @@ fun insertRefTable(referenceTableModel: ReferenceTableModel): Boolean {
 fun insertClassTable(classDataTableModel: ClassDataTableModel): Boolean {
     var count = 0
     for (element in classTableList) {
-        if (element.name == classDataTableModel.name) {
-            count++
+        if(!classDataTableModel.name.isEmpty()){
+            if (element.name == classDataTableModel.name) {
+                count++
+            }
         }
     }
 

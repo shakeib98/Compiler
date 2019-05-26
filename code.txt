@@ -24,7 +24,7 @@ abstract class x ext a{
 
 mainclass v ext a{
     static var int a = 10
-    var int l = 12
+    var zz l = 12
     fun main(){
 
     }

@@ -44,7 +44,7 @@
 <= ,  , 26>
 <INT_CONSTANT , 10 , 26>
 <VC , var , 27>
-<DT , int , 27>
+<ID , zz , 27>
 <ID , l , 27>
 <= ,  , 27>
 <INT_CONSTANT , 12 , 27>

@@ -10,6 +10,8 @@ var mainClassFlag = false
 var referenceTableModel = ReferenceTableModel()
 var classDataTableModel = ClassDataTableModel()
 
+var parameter = ""
+
 fun enter(): Boolean {
     if (listOfTokens[tokenNo].classPart == ConstantClass.INTERFACE
         || listOfTokens[tokenNo].classPart == ConstantClass.ABSTRACT
@@ -1091,17 +1093,31 @@ fun funDecCompulsory(): Boolean {
         if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE
             || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER
         ) {
+            if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = listOfTokens[tokenNo].classPart
+            else {
+                val tcp:TCP? = lookUpRefTable(listOfTokens[tokenNo].valuePart)
+                if(tcp != null){
+                    classDataTableModel.type = listOfTokens[tokenNo].valuePart
+
+                }else{
+                    println("UNDEFINED DATA TYPE")
+                    System.exit(0)
+                }
+            }
             tokenNo++
             if (listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER) {
+                classDataTableModel.name = listOfTokens[tokenNo].valuePart
                 tokenNo++
                 if (listOfTokens[tokenNo].classPart == ConstantClass.ROUND_BRAC_OPEN) {
                     tokenNo++
                     if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE
+                        || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER
                         || listOfTokens[tokenNo].classPart == ConstantClass.ROUND_BRAC_CLOSE
                     ) {
                         if (paramsDec()) {
                             if (listOfTokens[tokenNo].classPart == ConstantClass.ROUND_BRAC_CLOSE) {
                                 tokenNo++
+
                                 if (listOfTokens[tokenNo].classPart == ConstantClass.CURL_BRAC_OPEN) {
                                     tokenNo++
                                     if (listOfTokens[tokenNo].classPart == ConstantClass.IF
@@ -1162,7 +1178,19 @@ fun funDecCompulsory(): Boolean {
 }
 
 fun paramsDec(): Boolean {
-    if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) {
+    if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER) {
+        classDataTableModel.type = classDataTableModel.type + "," + listOfTokens[tokenNo].classPart
+        if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = classDataTableModel.type + "," + listOfTokens[tokenNo].classPart
+        else {
+            val tcp:TCP? = lookUpRefTable(listOfTokens[tokenNo].valuePart)
+            if(tcp != null){
+                classDataTableModel.type = classDataTableModel.type + "," + listOfTokens[tokenNo].classPart
+
+            }else{
+                println("UNDEFINED DATA TYPE")
+                System.exit(0)
+            }
+        }
         tokenNo++
         if (listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER) {
             tokenNo++
@@ -1221,7 +1249,16 @@ fun commonDec(): Boolean {
             || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER
         ) {
             if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = listOfTokens[tokenNo].classPart
-            else classDataTableModel.type = listOfTokens[tokenNo].valuePart
+            else {
+                val tcp:TCP? = lookUpRefTable(listOfTokens[tokenNo].valuePart)
+                if(tcp != null){
+                    classDataTableModel.type = listOfTokens[tokenNo].valuePart
+
+                }else{
+                    println("UNDEFINED DATA TYPE")
+                    System.exit(0)
+                }
+            }
             tokenNo++
             if (listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER) {
                 classDataTableModel.name = listOfTokens[tokenNo].valuePart

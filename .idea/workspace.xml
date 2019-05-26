@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a55adc3-9488-4994-907a-a80c6c1a802e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/semanticPackage/SemanticFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/semanticPackage/SemanticFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens" beforeDir="false" afterPath="$PROJECT_DIR$/tokens" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +20,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="203">
+              <caret line="893" column="33" lean-forward="true" selection-start-line="893" selection-start-column="33" selection-end-line="893" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainFile.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -31,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/semanticPackage/SemanticFunctions.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="468">
               <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
               <folding>
                 <element signature="e#25#68#0" expanded="true" />
@@ -52,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="377">
+              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -70,12 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SEM</find>
-      <find>cal</find>
-      <find>choice2</find>
-      <find>loop</find>
-      <find>body</find>
-      <find>11</find>
       <find>fun boy</find>
       <find>ext</find>
       <find>lookup</find>
@@ -95,11 +96,17 @@
       <find>commonDec</find>
       <find>lookUpRefTable</find>
       <find>int</find>
-      <find>normalClass</find>
       <find>interfaceBody</find>
       <find>normal</find>
       <find>allAfterPPP</find>
       <find>normalClassBody</find>
+      <find>`</find>
+      <find>classTableList.add(classDataTableModel)</find>
+      <find>mainc</find>
+      <find>classTableList.add(classDataTableModel)</find>
+      <find>mainClassB</find>
+      <find>normalClass</find>
+      <find>mainClassFlag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,8 +148,8 @@
         <option value="$PROJECT_DIR$/src/semanticPackage/SemanticConstants.kt" />
         <option value="$PROJECT_DIR$/src/MainFile.kt" />
         <option value="$PROJECT_DIR$/src/semanticPackage/SemanticFunctions.kt" />
-        <option value="$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt" />
         <option value="$PROJECT_DIR$/code.txt" />
+        <option value="$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt" />
       </list>
     </option>
   </component>
@@ -170,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -196,10 +202,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="semanticPackage" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Compiler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="syntaxPackage" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,7 +280,7 @@
   <component name="ToolWindowManager">
     <frame x="45" y="25" width="1321" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28313726" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21882352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -276,12 +289,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298791" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960783" weight="0.28338763" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4723127" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960783" visible="true" weight="0.28338763" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.17752443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49803922" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49803922" weight="0.32792208" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5019608" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32954547" />
@@ -328,15 +341,57 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
-          <line>785</line>
+          <line>786</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
-          <line>786</line>
+          <line>824</line>
           <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>867</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>889</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>897</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>920</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>200</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>733</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt</url>
+          <line>742</line>
+          <properties />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -420,20 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/semanticPackage/SemanticConstants.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainFile.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="24" column="94" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/semanticPackage/ClassDataTableModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -448,9 +489,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/semanticPackage/SemanticConstants.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/semanticPackage/SemanticFunctions.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="468">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
             <element signature="e#25#68#0" expanded="true" />
@@ -458,17 +506,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainFile.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="377">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/syntaxPackage/SyntaxFile.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="203">
+          <caret line="893" column="33" lean-forward="true" selection-start-line="893" selection-start-column="33" selection-end-line="893" selection-end-column="33" />
         </state>
       </provider>
     </entry>

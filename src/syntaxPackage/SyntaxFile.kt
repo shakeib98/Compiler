@@ -5,6 +5,7 @@ var result = false
 var tokenNo = 0
 var flag = false
 var classTableCounter = 0
+var mainClassFlag = false
 
 var referenceTableModel = ReferenceTableModel()
 var classDataTableModel = ClassDataTableModel()
@@ -249,7 +250,7 @@ fun normalClass(): Boolean {
                         if (ext()) {
                             referenceTableModel.reference = classTableCounter
                             if (insertRefTable(referenceTableModel)) {
-                                classTableList.add(classDataTableModel)
+           //                     classTableList.add(classDataTableModel)
                                 referenceTable.add(referenceTableModel)
                                 referenceTableModel = ReferenceTableModel()
                             } else {
@@ -730,14 +731,16 @@ fun mainClassBody(): Boolean {
         || listOfTokens[tokenNo].classPart == ConstantClass.OVERRIDE
         || listOfTokens[tokenNo].classPart == ConstantClass.CURL_BRAC_CLOSE
     ) {
+        mainClassFlag = true
         if (normalClassBody()) {
             if (listOfTokens[tokenNo].classPart == ConstantClass.FUN && listOfTokens[tokenNo + 1].classPart == ConstantClass.MAIN_METHOD) {
                 if (mainMethodCfg()) {
-                    if(insertClassTable(classDataTableModel)){
-                        classTableList.add(classDataTableModel)
-                        classDataTableModel = ClassDataTableModel()
-                        classTableCounter++
-                    }
+//                    if(insertClassTable(classDataTableModel)){
+//                        classTableList.add(classDataTableModel)
+//                        classDataTableModel = ClassDataTableModel()
+//                        classTableCounter++
+//                    }
+                    mainClassFlag = true
                     if (normalClassBody()) {
                         result = true
                         return result
@@ -883,10 +886,20 @@ fun normalClassBody(): Boolean {
             }
         }
     } else if (listOfTokens[tokenNo].classPart == ConstantClass.CURL_BRAC_CLOSE) {
-        if(insertClassTable(classDataTableModel)){
-            classTableList.add(classDataTableModel)
-            classDataTableModel = ClassDataTableModel()
-            classTableCounter++
+        if(mainClassFlag){
+//            if(insertClassTable(classDataTableModel)){
+//                classTableList.add(classDataTableModel)
+//                classDataTableModel = ClassDataTableModel()
+//                classTableCounter++
+//            }
+            mainClassFlag = false
+
+        }else{
+            if(insertClassTable(classDataTableModel)){
+                classTableList.add(classDataTableModel)
+                classDataTableModel = ClassDataTableModel()
+                classTableCounter++
+            }
         }
         result = true
         return result

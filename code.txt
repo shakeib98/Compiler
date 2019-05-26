@@ -15,7 +15,9 @@ open class c ext b{
 }
 
 class d ext c{
+    fun int a(int a, int b){
 
+    }
 }
 
 abstract class x ext a{
@@ -23,7 +25,7 @@ abstract class x ext a{
 }
 
 mainclass v ext a{
-    static var int a = 10
+    static var int b = 10
     var zz l = 12
     fun main(){
 

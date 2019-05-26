@@ -789,6 +789,7 @@ fun normalClassBody(): Boolean {
                 if(insertClassTable(classDataTableModel)){
                     classTableList.add(classDataTableModel)
                     classDataTableModel = ClassDataTableModel()
+                    println("counter $classTableCounter")
                     classTableCounter++
                 }else{
                     println("VARIABLE ALREADY DECLARED ON TOP LEVEL")
@@ -870,6 +871,7 @@ fun normalClassBody(): Boolean {
                         if(insertClassTable(classDataTableModel)){
                             classTableList.add(classDataTableModel)
                             classDataTableModel = ClassDataTableModel()
+                            println("counter $classTableCounter")
                             classTableCounter++
                         }else{
                             println("VARIABLE ALREADY DECLARED ON TOP LEVEL")
@@ -1061,11 +1063,16 @@ fun ooCombination(): Boolean {
     if (listOfTokens[tokenNo].classPart == ConstantClass.OPEN
         || listOfTokens[tokenNo].classPart == ConstantClass.OVERRIDE
     ) {
+        if(listOfTokens[tokenNo].classPart == ConstantClass.OPEN) classDataTableModel.tm = SemanticConstants.OPEN
+        else classDataTableModel.tm = SemanticConstants.OVERRIDE
+
         tokenNo++
         if (listOfTokens[tokenNo].classPart == ConstantClass.PUBLIC_CLASS
             || listOfTokens[tokenNo].classPart == ConstantClass.PROTECTED_CLASS
         ) {
-            tokenNo++
+            if(listOfTokens[tokenNo].classPart == ConstantClass.PUBLIC_CLASS) classDataTableModel.am = SemanticConstants.PUBLIC
+            else classDataTableModel.am = SemanticConstants.PROTECTED
+                tokenNo++
             if (listOfTokens[tokenNo].classPart == ConstantClass.FUN) {
                 if (funDecCompulsory()) {
                     result = true
@@ -1093,7 +1100,7 @@ fun funDecCompulsory(): Boolean {
         if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE
             || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER
         ) {
-            if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = listOfTokens[tokenNo].classPart
+            if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = listOfTokens[tokenNo].valuePart
             else {
                 val tcp:TCP? = lookUpRefTable(listOfTokens[tokenNo].valuePart)
                 if(tcp != null){
@@ -1179,8 +1186,7 @@ fun funDecCompulsory(): Boolean {
 
 fun paramsDec(): Boolean {
     if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER) {
-        classDataTableModel.type = classDataTableModel.type + "," + listOfTokens[tokenNo].classPart
-        if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = classDataTableModel.type + "," + listOfTokens[tokenNo].classPart
+        if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = classDataTableModel.type + "," + listOfTokens[tokenNo].valuePart
         else {
             val tcp:TCP? = lookUpRefTable(listOfTokens[tokenNo].valuePart)
             if(tcp != null){
@@ -1248,7 +1254,7 @@ fun commonDec(): Boolean {
         if (listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE
             || listOfTokens[tokenNo].classPart == ConstantClass.IDENTIFIER
         ) {
-            if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = listOfTokens[tokenNo].classPart
+            if(listOfTokens[tokenNo].classPart == ConstantClass.DATA_TYPE) classDataTableModel.type = listOfTokens[tokenNo].valuePart
             else {
                 val tcp:TCP? = lookUpRefTable(listOfTokens[tokenNo].valuePart)
                 if(tcp != null){

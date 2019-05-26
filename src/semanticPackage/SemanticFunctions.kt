@@ -32,6 +32,7 @@ fun insertClassTable(classDataTableModel: ClassDataTableModel): Boolean {
     var count = 0
     for (element in classTableList) {
         if(!classDataTableModel.name.isEmpty()){
+            println("elements ${element.name}")
             if (element.name == classDataTableModel.name) {
                 count++
             }
